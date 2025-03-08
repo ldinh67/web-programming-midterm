@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #B4CDED;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            background: url('chocolate.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner-text {
+            color: #B4CDED;
+            font-size: 60px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .box {
+            display: flex;
+            background-color: white;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .box img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .box p {
+            font-size: 20px;
+            text-align: left;
+            max-width: 50%;
+            color: #344966;
+            line-height: 1.5;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form h2 {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            color: #344966;
+        }
+
+        .form label {
+            font-size: 18px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .form input,
+        .form select,
+        .form textarea {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .form button {
+            font-size: 20px;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form button:hover {
+            background-color: #e0554c;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .box img {
+                max-width: 80%;
+                margin-bottom: 10px;
+            }
+
+            .box p {
+                max-width: 90%;
+                font-size: 18px;
+            }
+
+            .form {
+                width: 80%;
+            }
+
+            .banner-text {
+                font-size: 40px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="banner-text">Order Now</div>
+    </div>
+
+    <div class="box">
+        <img src="chocolate.jpg" alt="Eco-Friendly Chocolate">
+        <p>Explore our range of environmentally conscious products! Select your products, place your order, and contribute to a greener world.</p>
+    </div>
+
+    <div class="form">
+        <form id="orderForm">
+            <h2>Place Your Order</h2>
+    
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="product">Select Product:</label>
+            <select id="product" name="product">
+                <option value="temp">Temp</option>
+                <option value="temp">Temp</option>
+                <option value="temp">Temp</option>
+                <option value="temp">Temp</option>
+            </select>
+    
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+    
+            <label for="address">Shipping Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+    
+            <button type="submit">Place Order</button>
+    
+            <p id="confirmationMessage" style="display: none; color: green; font-size: 18px; text-align: center; margin-top: 15px;">
+                ✅ Your order has been submitted successfully!
+            </p>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            document.getElementById("confirmationMessage").style.display = "block";
+            this.reset();
+        });
+    </script>
+    
+
+</body>
+</html>
+
+
