@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Catalog | Things That Look Like Other Things</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #B4CDED;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 48px;
+            color: #F0F4EF;
+            margin: 20px 0;
+        }
+
+        .header {
+            display: flex;
+            background-color: #344966;
+            width: 100%;
+            padding: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            width: 300px;
+            border: 2px solid black;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #344966;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 35px;
+            }
+
+            .product-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2> Our Unique Products </h2>
+    </div>
+
+    <div class="product-container">
+        <div class="product-card">
+            <img src="images/leaf-card.jpg" alt="Leaf Business Card">
+            <h3>Leaf Business Card</h3>
+            <p>Eco-friendly business cards made from real leaves.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/seashell-keys.jpg" alt="Seashell Keys">
+            <h3>Seashell Keys</h3>
+            <p>Unique keychains with real seashells.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/rock-usb.jpg" alt="Rock USB">
+            <h3>Rock USB</h3>
+            <p>A USB drive that looks like a rock!</p>
+        </div>
+    </div>
+
+</body>
+</html>
