@@ -68,6 +68,8 @@
         padding: 15px;
         display: none;
         border-radius: 0 0 12px 12px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     
     /* Active FAQ Item */
