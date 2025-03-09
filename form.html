@@ -10,6 +10,9 @@
     
     <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
 
@@ -28,35 +31,100 @@
         </ul>
     </nav>
 
-    <!-- Contact Form Section -->
     <div class="contact-container">
-        <h1>🌱 Contact Us</h1>
-        <p class="header-text">We'd love to hear from you! Reach out with any questions.</p>
-        
-        <form id="contactForm">
+        <h1>🌿 Contact Us</h1>
+        <p class="header-text">Get in touch with us about our eco-friendly business solutions</p>
+        <form id="businessCardForm">
             <div class="form-group">
                 <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <input type="text" id="name" name="name" required>
                 <div class="error" id="name-error">Please enter your name</div>
             </div>
 
             <div class="form-group">
                 <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="email" id="email" name="email" required>
                 <div class="error" id="email-error">Please enter a valid email</div>
             </div>
 
             <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select subject</option>
+                    <option value="quote">Request a Quote</option>
+                    <option value="info">Product Information</option>
+                    <option value="support">Customer Support</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error" id="subject-error">Please select a subject</div>
+            </div>
+
+            <div class="form-group">
                 <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                <textarea id="message" name="message" rows="6" required></textarea>
                 <div class="error" id="message-error">Please enter your message</div>
             </div>
 
             <button type="submit">Send Message</button>
         </form>
-
-        <div id="success-message">🌿 Thank you for reaching out! We'll get back to you soon. 🌿</div>
+        <div id="success-message">Thank you for your message! We'll get back to you soon. 🌱</div>
     </div>
 
-</body>
+    <script>
+        $(document).ready(function() {
+            $('#businessCardForm').on('submit', function(e) {
+                e.preventDefault();
+                let isValid = true;
+
+                // Name validation
+                if (!$('#name').val()) {
+                    $('#name-error').fadeIn();
+                    isValid = false;
+                } else {
+                    $('#name-error').fadeOut();
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test($('#email').val())) {
+                    $('#email-error').fadeIn();
+                    isValid = false;
+                } else {
+                    $('#email-error').fadeOut();
+                }
+
+                // Subject validation
+                if (!$('#subject').val()) {
+                    $('#subject-error').fadeIn();
+                    isValid = false;
+                } else {
+                    $('#subject-error').fadeOut();
+                }
+
+                // Message validation
+                if (!$('#message').val().trim()) {
+                    $('#message-error').fadeIn();
+                    isValid = false;
+                } else {
+                    $('#message-error').fadeOut();
+                }
+
+                // If form is valid, show success message with animation
+                if (isValid) {
+                    $('#businessCardForm').slideUp(800, function() {
+                        $('#success-message')
+                            .fadeIn(500)
+                            .css('display', 'block')
+                            .effect('bounce', { times: 3 }, 300);
+                    });
+                }
+            });
+
+            // Real-time validation
+            $('input, select').on('change', function() {
+                $(this).siblings('.error').fadeOut();
+            });
+        });
+    </script>
+    </body>
 </html>
