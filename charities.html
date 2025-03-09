@@ -1,145 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title></title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Charities | Thingsception</title>
 
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caveat:wght@400..700&family=IM+Fell+Great+Primer:ital@0;1&family=Ole&family=Reenie+Beanie&family=Source+Serif+4:wght@200..900&display=swap" rel="stylesheet">
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #B4CDED;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-        }
-
-        h2 {
-                text-align: center;
-                font-size: 48px;
-                color: #F0F4EF;
-                margin: 20px 0;
-        }
-
-        .box-one {
-                display: flex;
-                background-color: #344966;
-                width: 100%;
-                padding: 30px;
-                align-items: center;
-                justify-content: center;
-                
-        }
-
-        .box {
-                display: flex;
-                background-color: white;
-                width: 80%;
-                margin: 20px auto;
-                align-items: center;
-                justify-content: space-between; 
-                border: 2px solid black; 
-                padding: 20px;
-                box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .box img {
-                max-width: 40%;
-                height: auto;
-                border-radius: 8px;
-                object-fit: cover;
-        }
-
-        .box a {
-                font-size: 20px;
-                text-align: left;
-                max-width: 50%;
-                color: #344966;
-                line-height: 1.5;
-        }
-
-
-
-
-        .text {
-            color: white;
-            text-align: center;
-            font-size: 100px;
-        }
-
-        @media (max-width: 600px) {
-            
-            .box {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .box img {
-                max-width: 80%;
-                margin-bottom: 10px;
-            }
-
-            .box a {
-                max-width: 90%;
-                font-size: 18px;
-            }
-
-            .box-one {
-                flex-direction: column;
-                text-align: center;
-                height: auto;
-                padding: 20px;
-            }
-
-            h2 {
-                font-size: 35px;
-            }
-        }
-       
-      
-        
-       
-
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="body">
-    
-    <hr style="height:5px; background-color: black"/>
+<body>
 
-    <div class="box-one">
-        <h2> Charities We've Worked With </h2>
-    </div>
-    <div class="box">
-        <img src="chocolate.jpg" height ="300">
-        <a> Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah 
-        Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah 
-        Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah 
-        Blah Blah Blah </a>
-    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html">Thingsception</a>
+        </div>
+        <ul>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="form.html">Contact</a></li>
+            <li><a href="charities.html">Charities</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-    <div class="box">
-        <a class = "text">  </a>
-    </div>
-
-    <div class="box">
-        <a class = "text">  </a>
-    </div>
-
-    <div class="box">
-        <a class = "text">  </a>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Charities We've Worked With</h1>
+        <p>Giving back through design and sustainability.</p>
     </div>
 
-    <div class="box">
-        <a class = "text">  </a>
+    <!-- Charities Section -->
+<div class="container">
+    <div class="charity-container">
+        <div class="charity-card">
+            <a href="https://ecofoundationbd.org/" target="_blank">
+                <h3>Eco Foundation</h3>
+            </a>
+            <p>Supporting environmental sustainability through education and innovation.</p>
+        </div>
+
+        <div class="charity-card">
+            <a href="https://designforgood.org/?section=navGoals" target="_blank">
+                <h3>Design for Good</h3>
+            </a>
+            <p>Bringing creativity and design thinking to communities in need.</p>
+        </div>
+
+        <div class="charity-card">
+            <a href="https://rheaply.com/reuse/" target="_blank">
+                <h3>ReUse Initiative</h3>
+            </a>
+            <p>Reducing waste through upcycling and creative reuse projects.</p>
+        </div>
     </div>
-
-
-
-    <hr />
-
-    
-
-</body>
-</html>
+</div>

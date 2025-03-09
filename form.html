@@ -2,188 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Eco-Friendly Business Cards</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #B4CDED;
-            margin: 0;
-            padding: 20px;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Thingsception</title>
 
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #344966;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header-text {
-            text-align: center;
-            color: #344966;
-            margin-bottom: 30px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        label {
-            width: 200px;
-            margin-right: 15px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        select,
-        textarea {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .error {
-            color: #DD1821;
-            font-size: 0.9em;
-            margin-top: 5px;
-            display: none;
-        }
-
-        button {
-            background-color: #344966;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            display: block;
-            margin: 20px auto;
-        }
-
-        button:hover {
-            background-color: #BFCC94;
-            color: #344966;
-        }
-
-        #success-message {
-            display: none;
-            text-align: center;
-            color: #344966;
-            font-weight: bold;
-            background-color: #BFCC94;
-            padding: 10px;
-            border-radius: 4px;
-        }
-    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caveat:wght@400..700&family=IM+Fell+Great+Primer:ital@0;1&family=Ole&family=Reenie+Beanie&family=Source+Serif+4:wght@200..900&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🌿 Contact Us</h1>
-        <p class="header-text">Get in touch with us about our eco-friendly business solutions</p>
-        <form id="businessCardForm">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html">Thingsception</a>
+        </div>
+        <ul>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="form.html">Contact</a></li>
+            <li><a href="charities.html">Charities</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <div class="contact-container">
+        <h1>🌱 Contact Us</h1>
+        <p class="header-text">We'd love to hear from you! Reach out with any questions.</p>
+        
+        <form id="contactForm">
             <div class="form-group">
                 <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 <div class="error" id="name-error">Please enter your name</div>
             </div>
 
             <div class="form-group">
                 <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 <div class="error" id="email-error">Please enter a valid email</div>
             </div>
 
             <div class="form-group">
-                <label for="subject">Subject:</label>
-                <select id="subject" name="subject" required>
-                    <option value="">Select subject</option>
-                    <option value="quote">Request a Quote</option>
-                    <option value="info">Product Information</option>
-                    <option value="support">Customer Support</option>
-                    <option value="other">Other</option>
-                </select>
-                <div class="error" id="subject-error">Please select a subject</div>
-            </div>
-
-            <div class="form-group">
                 <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
                 <div class="error" id="message-error">Please enter your message</div>
             </div>
 
             <button type="submit">Send Message</button>
         </form>
-        <div id="success-message">Thank you for your message! We'll get back to you soon. 🌱</div>
+
+        <div id="success-message">🌿 Thank you for reaching out! We'll get back to you soon. 🌿</div>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $('#businessCardForm').on('submit', function(e) {
-                e.preventDefault();
-                let isValid = true;
-
-                // Name validation
-                if (!$('#name').val()) {
-                    $('#name-error').fadeIn();
-                    isValid = false;
-                } else {
-                    $('#name-error').fadeOut();
-                }
-
-                // Email validation
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test($('#email').val())) {
-                    $('#email-error').fadeIn();
-                    isValid = false;
-                } else {
-                    $('#email-error').fadeOut();
-                }
-
-                // Subject validation
-                if (!$('#subject').val()) {
-                    $('#subject-error').fadeIn();
-                    isValid = false;
-                } else {
-                    $('#subject-error').fadeOut();
-                }
-
-                // Message validation
-                if (!$('#message').val().trim()) {
-                    $('#message-error').fadeIn();
-                    isValid = false;
-                } else {
-                    $('#message-error').fadeOut();
-                }
-
-                // If form is valid, show success message with animation
-                if (isValid) {
-                    $('#businessCardForm').slideUp(800, function() {
-                        $('#success-message')
-                            .fadeIn(500)
-                            .css('display', 'block')
-                            .effect('bounce', { times: 3 }, 300);
-                    });
-                }
-            });
-
-            // Real-time validation
-            $('input, select').on('change', function() {
-                $(this).siblings('.error').fadeOut();
-            });
-        });
-    </script>
 </body>
 </html>

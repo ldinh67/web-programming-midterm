@@ -1,0 +1,397 @@
+/* 🌿 General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Serif 4", serif;
+    background: url('./images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 🌿 Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌿 Logo */
+.navbar .logo {
+    font-size: 30px;
+    font-family: "Ole", sans-serif;
+    color: #171D0A;
+    letter-spacing: 2px;
+    text-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 🌿 Navbar Links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    font-family: "Reenie Beanie", cursive;
+    color: #171D0A;
+    text-decoration: none;
+    font-size: 28px;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #1c7827;
+    transform: scale(1.05);
+}
+
+/* 🌿 Hero Section */
+.hero {
+    font-family: "IM Fell Great Primer", serif;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin: 120px auto 40px auto;
+}
+
+.visit-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 🌿 Page Headings */
+h1, h2 {
+    font-family: "IM Fell Great Primer", serif;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: #344966;
+    line-height: 1.5;
+}
+
+/* 🌿 Google Maps */
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* 🌿 FAQ Section */
+.faq-container {
+    max-width: 900px;
+    margin: 150px auto 50px auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-size: 24px;
+    color: #2a2a2a;
+    background: none;
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: 0.3s ease-in-out;
+}
+
+.faq-answer {
+    font-size: 18px;
+    color: #344966;
+    display: none;
+    padding: 10px 0;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* 🌿 Homepage Welcome Title */
+.welcome-title {
+    font-family: "Ole", sans-serif;
+    font-size: 100px;
+    color: white;
+    text-shadow: 4px 3px 10px rgba(0, 0, 0, 0.5);
+    /* max-width: 100%; */
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 🌿 Mobile Fix */
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 60px;
+        margin-top: 150px;
+    }
+}
+
+/* 🌿 Charities Section */
+.charity-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.charity-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 350px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px solid #344966;
+}
+
+.charity-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+    border-color: #1c7827;
+}
+
+/* 🌿 Fix Shop Page Layout */
+body.products-page {
+    background: #F5F5DC;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Fix header */
+.header {
+    font-family: "IM Fell Great Primer", serif;
+    font-size: 50px;
+    color: #2a2a2a;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 120px;
+}
+
+/* Fix product container layout */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Fix product card alignment and spacing */
+.product-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Ensure images fit properly */
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Fix text formatting */
+.product-card h3 {
+    font-family: "IM Fell Great Primer", serif;
+    font-size: 22px;
+    color: #2a2a2a;
+    margin-top: 10px;
+}
+
+.product-card p {
+    font-size: 18px;
+    color: #344966;
+    margin-bottom: 10px;
+}
+
+/* Ensure consistent hover effect */
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* 🌿 Mobile Fix */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
+
+/* 🌿 Contact Form Styling */
+.contact-container {
+    max-width: 500px;
+    margin: 150px auto 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form Labels */
+label {
+    font-size: 20px;
+    color: #2a2a2a;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Contact Page Styling */
+.contact-container {
+    max-width: 500px;
+    margin: 150px auto 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 🌿 Fix input field visibility */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-family: "Source Serif 4", serif;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9); /* Slight white background for visibility */
+    color: #2a2a2a;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🌿 Fix placeholder color */
+input::placeholder, textarea::placeholder {
+    color: #888;
+    font-family: "Reenie Beanie", cursive;
+}
+
+/* 🌿 Highlight on focus */
+input:focus, textarea:focus {
+    border-color: #1c7827;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌿 Contact Form Submit Button */
+button {
+    background-color: #344966;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "IM Fell Great Primer", serif;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #BFCC94;
+    color: #344966;
+}
+
+/* 🌿 Success Message */
+#success-message {
+    display: none;
+    text-align: center;
+    color: #344966;
+    font-weight: bold;
+    background-color: #BFCC94;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* 🌿 Show message when form is submitted */
+#success-message.active {
+    display: block;
+}
+
+
+/* 🌿 Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%;
+        padding: 10px 20px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
