@@ -6,6 +6,7 @@
     <title>About Us | Thingsception</title>
 
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&family=Ole&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
     <style>
         /* General Styles */
@@ -19,70 +20,7 @@
             align-items: center;
         }
 
-        /* Navigation Bar */
-        .navbar {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            max-width: 900px;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 15px 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-radius: 40px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .navbar .logo {
-            font-size: 30px;
-            font-family: "Ole", sans-serif;
-            color: #171D0A;
-            letter-spacing: 2px;
-            text-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .navbar .logo a {
-            text-decoration: none; 
-            color: inherit; 
-        }
-
-        .navbar .logo a:hover {
-            color: #1c7827;
-            transform: scale(1.05);
-        }
-
-        .navbar .logo a:visited {
-            color: inherit; 
-        }
-
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar ul li {
-            margin: 0 15px;
-        }
-
-        .navbar ul li a {
-            font-family: "Reenie Beanie", cursive;
-            color: #171D0A;
-            text-decoration: none;
-            font-size: 28px;
-            transition: 0.3s ease-in-out;
-        }
-
-        .navbar ul li a:hover {
-            color: #1c7827;
-            transform: scale(1.05);
-        }
+        
 
         /* Hero Section */
         .hero {
@@ -104,11 +42,7 @@
             text-shadow: 3px 2px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .hero p {
-            font-family: "IM Fell Great Primer", serif;
-            font-size: 24px;
-            color: #344966;
-        }
+  
 
         /* Content Sections */
         .container {
@@ -124,84 +58,6 @@
             font-family: "IM Fell Great Primer", serif;
             font-size: 36px;
             color: #2a2a2a;
-        }
-
-        p {
-            font-size: 22px;
-            color: #344966;
-            line-height: 1.5;
-        }
-
-        /* Values Section */
-        .values-grid {
-            display: flex;
-            justify-content: space-around;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .value-card {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease-in-out;
-            width: 250px;
-            border: 2px solid #344966;
-        }
-
-        .value-card:hover {
-            transform: scale(1.05);
-            border-color: #1c7827;
-        }
-
-        /* Team Section */
-        .team-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .team-member {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-            width: 250px;
-            border: 2px solid #344966;
-        }
-
-        .team-member:hover {
-            transform: scale(1.05);
-            border-color: #1c7827;
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 48px;
-            }
-
-            .values-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .team-grid {
-                flex-direction: column;
-                align-items: center;
-            }
         }
     </style>
 </head>
@@ -243,10 +99,10 @@
         <!-- Team Section -->
         <h2>Meet Our Team</h2>
         <div class="team-grid">
-            <div class="team-member"><img src="team1.jpg" alt="Team 1"><h3>Helena Fu</h3><p>Creative Director</p></div>
-            <div class="team-member"><img src="team2.jpg" alt="Team 2"><h3>Leann Dinh</h3><p>Sustainability Expert</p></div>
-            <div class="team-member"><img src="team2.jpg" alt="Team 2"><h3>Agatha Yang</h3><p>Product Manager</p></div>
-            <div class="team-member"><img src="team2.jpg" alt="Team 2"><h3>Rindha Reddy</h3><p>Charity Director</p></div>
+            <div class="team-member"><h3>Helena Fu</h3><p>Creative Director</p></div>
+            <div class="team-member"><h3>Leann Dinh</h3><p>Sustainability Expert</p></div>
+            <div class="team-member"><h3>Agatha Yang</h3><p>Product Manager</p></div>
+            <div class="team-member"><h3>Rindha Reddy</h3><p>Charity Director</p></div>
         </div>
     </div>
 
