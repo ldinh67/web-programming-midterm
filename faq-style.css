@@ -11,6 +11,7 @@
     
     /* FAQ Container */
     .faq-container {
+        min-width: 900px; /* is this it?? */
         background: white;
         padding: 40px;
         width: 80%;
