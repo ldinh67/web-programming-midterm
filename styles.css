@@ -438,10 +438,6 @@ button:hover {
         padding: 15px;
     }
 
-    .team-member img {
-        width: 120px;
-        height: 120px;
-    }
 
     h2 {
         font-size: 28px;
@@ -463,11 +459,21 @@ button:hover {
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 20px;
     }
 
+    .hero p {
+        font-size: 14px;
+    }
+    
     .hero {
         margin-top: 180px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 15px auto;
+        padding: 15px;
     }
 }
 
