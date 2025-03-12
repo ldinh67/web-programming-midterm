@@ -7,19 +7,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caveat:wght@400..700&family=IM+Fell+Great+Primer:ital@0;1&family=Ole&family=Reenie+Beanie&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const faqItems = document.querySelectorAll(".faq-item");
-
-            faqItems.forEach(item => {
-                const question = item.querySelector(".faq-question");
-                question.addEventListener("click", () => {
-                    item.classList.toggle("active");
-                });
-            });
-        });
-    </script>
 </head>
 <body>
 
@@ -42,27 +29,8 @@
     <div class="faq-container">
         <h1>💡 FAQ</h1>
         <p style="font-style: italic;">Have Questions? We've Got Answers!</p>
-        
-        <div class="faq-item">
-            <button class="faq-question">What is Thingsception? <span class="icon">+</span></button>
-            <div class="faq-answer">Thingsception is a design business that reimagines everyday products with nature-inspired aesthetics, advocating for sustainability.</div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">How are your products eco-friendly? <span class="icon">+</span></button>
-            <div class="faq-answer">We use sustainable materials and donate a portion of our profits to environmental charities.</div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">How can I support your mission? <span class="icon">+</span></button>
-            <div class="faq-answer">By purchasing our products and spreading awareness about sustainable design!</div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">I am an NGO, how can we partner up? <span class="icon">+</span></button>
-            <div class="faq-answer">Go to our Contact Us page to get in touch with us!</div>
-        </div>
     </div>
 
+    <script src="faq-script.js"></script>
 </body>
 </html>

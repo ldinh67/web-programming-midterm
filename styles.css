@@ -397,16 +397,141 @@ button:hover {
 /* 🌿 Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        width: 90%;
-        padding: 10px 20px;
+        width: 95%;
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar ul li {
+        margin: 5px;
+    }
+
+    .hero {
+        width: 95%;
+        padding: 30px 20px;
+        margin-top: 150px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
     }
 
     .container {
-        width: 90%;
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
     }
 
-    .product-container {
-        flex-direction: column;
-        align-items: center;
+    .values-grid, .team-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .value-card, .team-member {
+        padding: 15px;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Add styles for even smaller screens */
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 24px;
+    }
+
+    .navbar ul li a {
+        font-size: 22px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero {
+        margin-top: 180px;
+    }
+}
+
+/* Values Section */
+.values-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    width: 250px;
+    border: 2px solid #344966;
+}
+
+.value-card:hover {
+    transform: scale(1.05);
+    border-color: #1c7827;
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: auto;
+    border: 2px solid #344966;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    border-color: #1c7827;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .values-grid, .team-grid {
+        grid-template-columns: 1fr;
     }
 }
