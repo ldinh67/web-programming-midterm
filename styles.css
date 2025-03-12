@@ -535,3 +535,13 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+
+footer {
+    color: white;
+    text-align: right;
+    padding: 10px 0;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
