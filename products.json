@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Leaf Business Card",
+        "image": "images/leaf-card.jpg",
+        "description": "Eco-friendly business cards made from real leaves.",
+        "price": 9.99
+    },
+    {
+        "name": "Seashell Keys",
+        "image": "images/seashell-keys.jpg",
+        "description": "Unique keychains with real seashells.",
+        "price": 12.99
+    },
+    {
+        "name": "Rock USB",
+        "image": "images/rock-usb.jpg",
+        "description": "A USB drive that looks like a rock!",
+        "price": 24.99
+    }
+]
