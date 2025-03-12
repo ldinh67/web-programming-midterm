@@ -420,7 +420,7 @@ button:hover {
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 22px;
     }
 
     .container {
@@ -459,13 +459,13 @@ button:hover {
     }
 
     .hero h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .hero p {
         font-size: 14px;
     }
-    
+
     .hero {
         margin-top: 180px;
     }
