@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const productPrices = {
+        "Leaf Business Card": 9.99,
+        "Seashell Keys": 12.99,
+        "Rock USB": 24.99
+    };
+
     class ProductManager {
         constructor(containerSelector) {
             this.productContainer = document.querySelector(containerSelector);
@@ -19,16 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        // Render product list dynamically
+        // Render product list dynamically using the associative array
         renderProducts() {
             let productHTML = "";
             this.products.forEach(product => {
+                const price = productPrices[product.name] || product.price.toFixed(2); // Fetch from associative array if available
                 productHTML += `
                 <div class="product-card">
                     <img src="${product.image}" alt="${product.name}">
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
-                    <p class="product-price">$${product.price.toFixed(2)}</p>
+                    <p class="product-price">$${price}</p>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>`;
             });
@@ -42,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const cartButtons = document.querySelectorAll(".add-to-cart");
             cartButtons.forEach((button, index) => {
                 button.addEventListener("click", () => {
-                    alert(`Added "${this.products[index].name}" to cart!`);
+                    alert(`Added "${this.products[index].name}" to cart for $${productPrices[this.products[index].name] || this.products[index].price.toFixed(2)}`);
                 });
             });
         }
