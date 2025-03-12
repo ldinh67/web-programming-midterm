@@ -543,11 +543,13 @@ button:hover {
 }
 
 footer {
-    color: white;
+    color: white !important; 
     text-align: right;
-    padding: 10px 0;
     position: fixed; 
     bottom: 0;
-    left: 0;
-    width: 100%;
+    right: 2%;
+    width: 10%;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
 }
